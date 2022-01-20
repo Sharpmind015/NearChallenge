@@ -4,7 +4,7 @@ import {FC} from 'react';
 
 const Topbar : FC = () => {
   return (
-    <header className="flex justify-between items-center bg-gray-700 py-3 px-6 flex-wrap">
+    <header className="flex justify-between items-center bg-gray-700 py-3 px-6 flex-wrap h-20 fixed top-0 left-0 w-full z-50">
       <Image src="/arrow.svg" width="20" height="22" alt="" />
       <Image src="/bookmark.svg" width="20" height="22" alt="" />
       <div className='pl-3 pr-4 flex justify-between items-center py-3 bg-white rounded-30px' >
