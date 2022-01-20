@@ -12,4 +12,13 @@
       width: 362px;
     }
   }
+  .leading-5.5 {
+    line-height: 1.375rem;
+  }
+  .top-3.5 {
+    top: 0.8125rem;
+  }
+  .right-3.5 {
+    right: 0.8125rem;
+  }
 }
