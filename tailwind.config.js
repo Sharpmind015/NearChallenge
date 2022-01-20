@@ -12,7 +12,8 @@ module.exports = {
         200: '#799CFF',
         300: '#9DB7FF',
         400: '#CFDCFF',
-        500: '#EAEFFF'
+        500: '#EAEFFF',
+        600: '#F0EBFF'
       },
       'accent': {
         100: '#B072FF',
@@ -29,7 +30,14 @@ module.exports = {
         700: '#F5F5F5',
         800: '#6F6E73'
       },
-      'white': '#FFFFFF'
+      'white': '#FFFFFF',
+      'green': {
+        100: '#E2F9F3',
+        200: '#EBF5FF'
+      },
+      'pink': {
+        100: '#FFF3EC'
+      }
     },
     extend: {},
     fontFamily: {

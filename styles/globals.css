@@ -8,8 +8,7 @@
     /* letter-spacing: -0.154px; */
   }
   .heading--1 {
-    @apply leading-5;
-    font-size: 0.875rem;
+    @apply leading-5 text-sm;
   }
 }
 
