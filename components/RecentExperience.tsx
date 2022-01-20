@@ -12,16 +12,16 @@ interface Props {
 const RecentExperience : FC<Props> = ({src, title, description, users}) => {
   return (
     <Link href='' >
-      <a className='flex flex-wrap'>
+      <a className='flex flex-wrap justify-between mt-4'>
         <div className='flex flex-wrap'>
           <Image src={src} width='69' height='69' alt='' />
           <div className='ml-4'>
-            <h4 className='heading heading--2'>{title}</h4>
-            <p className='text-gray-800 text-12px font-medium leading-4 mt-1'>{description}</p>
+            <h4 className='heading heading--2 text-gray-200'>{title}</h4>
+            <p className='text-gray-300 text-12px font-medium leading-4 mt-1'>{description}</p>
             <p className='text-12px font-medium leading-5 not-italic text-blue-100 mb-1'>{users}</p>
           </div>
         </div>
-        <Image src='arrowleft.svg' width='6' height='11' alt='' />
+        <Image src='/arrowleft.svg' width='6' height='11' alt='' />
       </a> 
     </Link>
   )

@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Container from '../layouts/Container'
 import Topbar from '../layouts/Topbar'
+import RecentExperience from '../components/RecentExperience'
 import {useState} from 'react'
 
 const Experience: NextPage = () => {
@@ -35,6 +36,8 @@ const Experience: NextPage = () => {
             </button>
           </div>
           <h3 className='heading heading--2 mt-6'>Recent Experiences</h3>
+          <RecentExperience src='/DeFi.png' title='DeFi Swap' description='Swap your digital assets' users='+200 users' />
+          <RecentExperience src='/Docu.png' title='Docu Sign' description='sign smart contracts seamlessly' users='+1k users' />
         </main>
         </div>
       </Container>
