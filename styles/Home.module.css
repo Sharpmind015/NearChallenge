@@ -4,7 +4,7 @@
 
 @layer components {
   .homeContainer {
-    @apply w-full min-h-screen bg-no-repeat bg-cover bg-center flex flex-col items-center justify-between pb-8;
+    @apply w-full min-h-screen bg-no-repeat bg-cover bg-center flex flex-col items-center justify-center relative;
     background-image: url('../public/Group 414.png');
   }
   .homeTagline {
@@ -16,7 +16,7 @@
 }
 @layer utilities {
   .home-text {
-    @apply leading-5 text-center font-medium;
+    @apply leading-5 text-center;
     color: rgba(255, 255, 255, 0.9);
     font-size: 0.9375rem;
   }

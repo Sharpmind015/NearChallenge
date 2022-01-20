@@ -14,12 +14,11 @@ const Home: NextPage = () => {
       </Head>
       <Container>
         <main className={style.homeContainer}>
-          <div></div>
           <div className="flex justify-center flex-col items-center">
             <Image src="/Homepage.png" width="172" height="36" alt="Homepage" />
             <p className={style.homeTagline}>a web3 gateway to hidden experiences</p>
           </div>
-          <div className="flex justify-center flex-col items-center">
+          <div className="flex justify-center flex-col items-center absolute bottom-8">
             <p className={style.homeCredit}>powered by</p>
             <Image src="/Layer 1.png" width="114" height="30" alt="Homepage" />
           </div>
