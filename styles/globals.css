@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer utilities {
+  .mobile-container {
+    @apply max-w-full min-h-screen mx-auto;
+  }
+  @screen sm {
+    .mobile-container {
+      width: 362px;
+    }
+  }
+}
