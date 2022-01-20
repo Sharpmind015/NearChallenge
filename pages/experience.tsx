@@ -18,9 +18,10 @@ const Experience: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Container>
-        <main className="">
+          <div>
           <Topbar />
-          <div className='mt-3 px-6 flex justify-between'>         
+          <main className="px-6">
+          <div className='mt-3 flex justify-between'>         
             <form onSubmit={(e) => e.preventDefault()}>
               <label className='relative w-269px w-1/2 h-12' htmlFor='Search'>
                 <svg className='absolute left-3 top-1/2 -translate-y-1/2' width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -33,7 +34,9 @@ const Experience: NextPage = () => {
               <Image src="/filter.svg" width='24' height='24' alt='' />
             </button>
           </div>
+          <h3 className='heading heading--2 mt-6'>Recent Experiences</h3>
         </main>
+        
       </Container>
     </div>
   )
