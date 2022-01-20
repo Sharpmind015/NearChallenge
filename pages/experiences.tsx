@@ -9,7 +9,7 @@ import RecentExperience from '../components/RecentExperience'
 import Category from '../components/Category'
 import SeeAllContainer from '../layouts/SeeAllContainer'
 
-const Experience: NextPage = () => {
+const Experiences: NextPage = () => {
   const [search, setSearch] = useState<string>('');
   const onChange : (e : React.ChangeEvent<HTMLInputElement>) => void = (e) => {
     setSearch(e.target.value);
@@ -72,4 +72,4 @@ const Experience: NextPage = () => {
   )
 }
 
-export default Experience
+export default Experiences
