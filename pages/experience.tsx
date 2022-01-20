@@ -36,7 +36,7 @@ const Experience: NextPage = () => {
           </div>
           <h3 className='heading heading--2 mt-6'>Recent Experiences</h3>
         </main>
-        
+        </div>
       </Container>
     </div>
   )
