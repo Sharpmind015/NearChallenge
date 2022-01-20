@@ -4,7 +4,7 @@
 
 @layer components {
   .heading {
-    @apply font-semibold not-italic text-center text-gray-100;
+    @apply font-semibold not-italic text-gray-100;
     /* letter-spacing: -0.154px; */
   }
   .heading--1 {
