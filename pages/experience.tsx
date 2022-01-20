@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Container from '../layouts/Container'
 import Topbar from '../layouts/Topbar'
 import RecentExperience from '../components/RecentExperience'
+import Category from '../components/Category'
 import {useState} from 'react'
 import Link from 'next/link'
 
@@ -39,7 +40,7 @@ const Experience: NextPage = () => {
           <h3 className='heading heading--2 mt-6'>Recent Experiences</h3>
           <RecentExperience src='/DeFi.png' title='DeFi Swap' description='Swap your digital assets' users='+200 users' />
           <RecentExperience src='/Docu.png' title='Docu Sign' description='sign smart contracts seamlessly' users='+1k users' />
-          <div className='flex justify-between items-center mt-6'>
+          <div className='flex justify-between items-center mt-6 mb-4'>
             <h3 className='heading heading--2'>Popular categories</h3>
             <div>
               <Link href=''>
@@ -50,6 +51,26 @@ const Experience: NextPage = () => {
                   </svg>
                 </a>
               </Link>
+            </div>
+          </div>
+          <div className='flex justify-between flex-wrap -mx-3'>
+            <div className='px-3 w-1/2'>
+              <Category src='/Exchanges.png' title='Exchanges' colorType='bg-blue-500' />
+            </div>
+            <div className='px-3 w-1/2'>
+              <Category src='/Games.png' title='Games' colorType='bg-gray-700' />
+            </div>
+            <div className='px-3 w-1/2'>
+              <Category src='/Marketplaces.png' title='Marketplaces' colorType='bg-green-100' />
+            </div>
+            <div className='px-3 w-1/2'>
+              <Category src='/Defi2.png' title='Defi' colorType='bg-pink-100' />
+            </div>
+            <div className='px-3 w-1/2'>
+              <Category src='/Collectibles.png' title='Collectibles' colorType='bg-green-200' />
+            </div>
+            <div className='px-3 w-1/2'>
+              <Category src='/Utilities.png' title='Utilities' colorType='bg-blue-600' />
             </div>
           </div>
         </main>
