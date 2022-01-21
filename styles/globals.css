@@ -10,6 +10,16 @@
   .heading--1 {
     @apply leading-5 text-sm;
   }
+  .heading--2 {
+    @apply text-lg leading-6 text-gray-200;
+  }
+  .btn {
+    @apply px-3 py-2 text-base leading-6 font-semibold;
+    border-radius: 10px;
+  }
+  .btn-gray-200 {
+    @apply bg-gray-200 text-white;
+  }
 }
 
 
