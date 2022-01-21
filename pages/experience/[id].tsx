@@ -6,6 +6,7 @@ import Image from 'next/image'
 import { Tab } from '@headlessui/react'
 import Container from '../../layouts/Container'
 import Topbar from '../../layouts/Topbar'
+import Overview from '../../components/Overview'
 
 const Experience: NextPage = () => {
   return (
@@ -42,8 +43,8 @@ const Experience: NextPage = () => {
               <Image src='/users.svg' width='16' height='16' alt='' />
               <p className='text-gray-300 text-sm leading-5.5 not-italic ml-2'>24,000+ users</p>
             </div>
-            <Tab.Group as='div' className='w-full mt-6 -mx-6'>
-              <Tab.List className='flex justify-between w-screen'>
+            <Tab.Group as='div' className='w-full mt-6'>
+              <Tab.List className='flex justify-between w-screen -mx-6'>
                 <Tab className={({ selected }) => selected ? 'text-base font-semibold text-gray-100 text-center w-1/2 border-gray-100 border-b-2 pb-3' : 'text-gray-300 text-base text-center w-1/2 pb-4'}>
                   Details
                 </Tab>
@@ -52,7 +53,9 @@ const Experience: NextPage = () => {
                 </Tab>
               </Tab.List>
               <Tab.Panels>
-                <Tab.Panel>Content 1</Tab.Panel>
+                <Tab.Panel>
+                  <Overview content='it is easy to electronically sign, manage and distribute all your contracts and documents safely, securely, anywhere, anytime- paperlessly.' />
+                </Tab.Panel>
                 <Tab.Panel>Content 2</Tab.Panel>
               </Tab.Panels>
             </Tab.Group>
