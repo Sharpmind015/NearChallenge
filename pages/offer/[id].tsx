@@ -9,7 +9,7 @@ import Topbar from '../../layouts/Topbar'
 import Overview from '../../components/Overview'
 import Notification from '../../components/Notification'
 import MessageTrade from '../../components/MessageTrade'
-import MessageOffer from '../../components/MessageOffers'
+import MessageOffer from '../../components/MessageOffer'
 import style from '../../styles/Offer.module.css'
 
 const Offer: NextPage = () => {
