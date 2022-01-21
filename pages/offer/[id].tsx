@@ -25,7 +25,7 @@ const Offer: NextPage = () => {
             <Image src="/nft.png" width='157' height='147' alt='' />
           </div>
           <main className="px-6">
-            <h2 className='heading heading--3 mt-4'>Digital Ninja</h2>
+            <h2 className='heading heading--3 mt-4 text-black'>Digital Ninja</h2>
             <p className='text-sm font-medium leading-5 not-italic text-accent-100 mt-2'>#72873</p>
             <Tab.Group as='div' className='w-full mt-6'>
               <Tab.List className='flex justify-between w-screen -mx-6 border-b-1 border-gray-500'>
