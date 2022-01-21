@@ -12,7 +12,7 @@ import ExperienceModalBody from '../../components/ExperienceModalBody'
 import useModalWrapper from '../../custom-hook/useModalWrapper'
 
 const Experience: NextPage = () => {
-  const {ModalWrapper, isOpen, setIsOpen} = useModalWrapper(<ExperienceModalBody />, <h1 className='text-base leading-5.5 font-semibold text-gray-200'>Share this Experience</h1>, 'Share this experience')
+  const {ModalWrapper, isOpen, setIsOpen} = useModalWrapper(<ExperienceModalBody />, <span className='text-base leading-5.5 font-semibold text-gray-200'>Share this Experience</span>, 'Share this experience')
   return (
     <div className="">
       <Head>
