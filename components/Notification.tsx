@@ -9,7 +9,7 @@ interface Props {
 
 const Notification : FC<Props> = ({src, children}) => {
   return (
-    <Link href='/' >
+    <Link href='#' >
       <a className={`flex items-center mt-4 w-full h-fit`}>
         <Image className='object-cover' src={src} width='35' height='35' alt='' />
         {children}
