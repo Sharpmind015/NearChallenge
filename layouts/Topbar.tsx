@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { useRouter } from 'next/router'
 import {FC} from 'react';
 
@@ -10,7 +11,11 @@ const Topbar : FC = () => {
       <button type='button' className='flex justify-center items-center' onClick={() => router.back()}>
         <Image src="/arrow.svg" width="20" height="22" alt="" />
       </button>
-      <Image src="/bookmark.svg" width="20" height="22" alt="" />
+      <Link href='/'>
+        <a>
+          <Image src="/bookmark.svg" width="20" height="22" alt="" />
+        </a>
+      </Link>
       <div className='pl-3 pr-4 flex justify-between items-center py-3 bg-white rounded-30px' >
         <Image src="/profile.svg" width="26" height="26" alt="" />
         <h3 className='heading heading--1 ml-2 mr-4'>Johndoe.near</h3>
