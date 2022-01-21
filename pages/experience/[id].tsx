@@ -8,8 +8,10 @@ import Container from '../../layouts/Container'
 import Topbar from '../../layouts/Topbar'
 import Overview from '../../components/Overview'
 import Message from '../../components/Message'
+import useModalWrapper from '../../custom-hook/useModalWrapper'
 
 const Experience: NextPage = () => {
+  const {} = useModalWrapper(<h1 className='text-base leading-5.5 font-semibold text-gray-200'>Share this experience</h1>, <h1 className='text-base leading-5.5 font-semibold text-gray-200'>Share this experience</h1>, 'Share this experience')
   return (
     <div className="">
       <Head>
