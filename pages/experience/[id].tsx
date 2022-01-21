@@ -42,10 +42,14 @@ const Experience: NextPage = () => {
               <Image src='/users.svg' width='16' height='16' alt='' />
               <p className='text-gray-300 text-sm leading-5.5 not-italic ml-2'>24,000+ users</p>
             </div>
-            <Tab.Group>
-              <Tab.List>
-                <Tab>Tab 1</Tab>
-                <Tab>Tab 2</Tab>
+            <Tab.Group as='div' className='w-full mt-6 -mx-6'>
+              <Tab.List className='flex justify-between w-screen'>
+                <Tab className={({ selected }) => selected ? 'text-base font-semibold text-gray-100 text-center w-1/2 border-gray-100 border-b-2 pb-3' : 'text-gray-300 text-base text-center w-1/2 pb-4'}>
+                  Details
+                </Tab>
+                <Tab className={({ selected }) => selected ? 'text-base font-semibold text-gray-100 text-center w-1/2 border-gray-100 border-b-2 pb-3' : 'text-gray-300 text-base text-center w-1/2 pb-4'}>
+                  Activities
+                </Tab>
               </Tab.List>
               <Tab.Panels>
                 <Tab.Panel>Content 1</Tab.Panel>
