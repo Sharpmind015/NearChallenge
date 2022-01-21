@@ -23,6 +23,6 @@ export const counterOfferSlice = createSlice({
 
 export const {  handleCounterOffer } = counterOfferSlice.actions;
 
-export const selectCount = (state: RootState) => state.counter.value;
+export const selectCounterOffer = (state: RootState) => state.counter.value;
 
 export default counterOfferSlice.reducer;

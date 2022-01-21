@@ -1,6 +1,12 @@
+import React from "react";
 import Image from "next/image";
+import { useAppDispatch, useAppSelector } from "../app/hooks";
+import { selectCounterOffer, handleCounterOffer } from "../app/FormSlice";
 
-const CounterModal : React.FC = () => (
+const CounterModal : React.FC = () => {
+  const counterOffer = useAppSelector(selectCounterOffer);
+  const dispatch = useAppDispatch();
+  return(
   <div className="flex flex-col items-start justify-center mt-1">
     <p className="text-sm font-medium text-accent-200 leading-5">#72873</p>
     <div className="mt-7 flex items-center">
@@ -12,7 +18,7 @@ const CounterModal : React.FC = () => (
       <label htmlFor="amount" className="w-full text-sm font-semibold text-black leading-4 mr-6 mt-6 block relative">
         Amount
         <div className="relative mt-3">
-          <input type='number' placeholder="0.0000" className="text-lg text-gray-300 leading-4 w-full px-4 py-3 bg-gray-900 rounded-md border border-gray-600 outline-none relative" />
+          <input type='text' value={counterOffer} placeholder="0.0000" onChange={(e : React.ChangeEvent<HTMLInputElement>) => dispatch(handleCounterOffer(e.target.value))} className="text-lg text-gray-300 leading-4 w-full px-4 py-3 bg-gray-900 rounded-md border border-gray-600 outline-none relative" />
           <span className="text-sm font-semibold text-gray-200 leading-5.5 bg-gray-900 h-full py-3 px-4 rounded-r-md absolute top-0 right-0 border-gray-600 border">NEAR</span>
         </div>
       </label>
@@ -24,6 +30,6 @@ const CounterModal : React.FC = () => (
       Make Offer
     </button>
   </div>
-)
+)}
 
 export default CounterModal;
