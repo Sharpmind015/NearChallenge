@@ -7,7 +7,8 @@ import { Tab } from '@headlessui/react'
 import Container from '../../layouts/Container'
 import Topbar from '../../layouts/Topbar'
 import Overview from '../../components/Overview'
-import Message from '../../components/Message'
+import Notification from '../../components/Notification'
+import MessageExperience from '../../components/MessageExperience'
 import ExperienceModalBody from '../../components/ExperienceModalBody'
 import useModalWrapper from '../../custom-hook/useModalWrapper'
 
@@ -50,10 +51,10 @@ const Experience: NextPage = () => {
             </div>
             <Tab.Group as='div' className='w-full mt-6'>
               <Tab.List className='flex justify-between w-screen -mx-6'>
-                <Tab className={({ selected }) => selected ? 'text-base font-semibold text-gray-100 text-center w-1/2 border-gray-100 border-b-2 pb-3' : 'text-gray-300 text-base text-center w-1/2 pb-4'}>
+                <Tab className={({ selected }) => selected ? 'text-base font-semibold text-gray-100 text-center w-1/2 border-gray-100 border-b-2 pb-3' : 'text-gray-300 text-base text-center w-1/2 pb-4  font-semibold'}>
                   Details
                 </Tab>
-                <Tab className={({ selected }) => selected ? 'text-base font-semibold text-gray-100 text-center w-1/2 border-gray-100 border-b-2 pb-3' : 'text-gray-300 text-base text-center w-1/2 pb-4'}>
+                <Tab className={({ selected }) => selected ? 'text-base font-semibold text-gray-100 text-center w-1/2 border-gray-100 border-b-2 pb-3' : 'text-gray-300 text-base text-center w-1/2 pb-4  font-semibold'}>
                   Activities
                 </Tab>
               </Tab.List>
@@ -71,9 +72,15 @@ const Experience: NextPage = () => {
                   <p className='flex justify-center items-center flex-center mt-5'> 
                     <span className='bg-gray-700 py-1 px-2 inline-block rounded-2xl font-12px text-gray-300 font-medium'>12 activity found</span>
                   </p>
-                  <Message src='/message1.svg' name='johndoe.near' message='signed the contract successfully' time='2 days ago' />
-                  <Message src='/message2.svg' name='CryptoKing.near' message='requested to sign the contract' time='2 days ago' />
-                  <Message src='/message2.svg' name='maxwell.near' message='requested to sign the contract' time='2 days ago' />
+                  <Notification src='/message1.svg'>
+                    <MessageExperience name='johndoe.near' message='signed the contract successfully' time='2 days ago' />
+                  </Notification>
+                  <Notification src='/message2.svg'>
+                    <MessageExperience name='CryptoKing.near' message='requested to sign the contract' time='2 days ago' />
+                  </Notification>
+                  <Notification src='/message2.svg'>
+                    <MessageExperience name='maxwell.near' message='requested to sign the contract' time='2 days ago' />
+                  </Notification>
                 </Tab.Panel>
               </Tab.Panels>
             </Tab.Group>

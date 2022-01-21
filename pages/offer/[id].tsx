@@ -7,7 +7,8 @@ import { Tab } from '@headlessui/react'
 import Container from '../../layouts/Container'
 import Topbar from '../../layouts/Topbar'
 import Overview from '../../components/Overview'
-import Message from '../../components/Message'
+import Notification from '../../components/Notification'
+import MessageTrade from '../../components/MessageTrade'
 import style from '../../styles/Offer.module.css'
 
 const Offer: NextPage = () => {
@@ -28,18 +29,18 @@ const Offer: NextPage = () => {
             <h2 className='heading heading--3 mt-4 text-black'>Digital Ninja</h2>
             <p className='text-sm font-medium leading-5 not-italic text-accent-100 mt-2'>#72873</p>
             <div className='flex items-center mt-3'>
-              <Image src='/message1.svg' width='26' height='26' alt='' />
+              <Image src='/offername.svg' width='26' height='26' alt='' />
               <p className='heading heading--1 text-gray-100 ml-2'>Johndoe.near</p>
             </div>
             <Tab.Group as='div' className='w-full mt-6'>
               <Tab.List className='flex justify-between w-screen -mx-6 border-b-1 border-gray-500'>
-                <Tab className={({ selected }) => selected ? 'text-sm font-semibold text-gray-100 text-center w-1/2 border-gray-100 border-b-2 pb-3' : 'text-gray-300 text-sm text-center w-1/2 pb-4'}>
+                <Tab className={({ selected }) => selected ? 'text-sm font-semibold text-gray-100 text-center w-1/2 border-gray-100 border-b-2 pb-3' : 'text-gray-300 text-sm text-center w-1/2 pb-4  font-semibold'}>
                   Info
                 </Tab>
-                <Tab className={({ selected }) => selected ? 'text-sm font-semibold text-gray-100 text-center w-1/2 border-gray-100 border-b-2 pb-3' : 'text-gray-300 text-sm text-center w-1/2 pb-4'}>
+                <Tab className={({ selected }) => selected ? 'text-sm font-semibold text-gray-100 text-center w-1/2 border-gray-100 border-b-2 pb-3' : 'text-gray-300 text-sm text-center w-1/2 pb-4  font-semibold'}>
                   Pending Offers
                 </Tab>
-                <Tab className={({ selected }) => selected ? 'text-sm font-semibold text-gray-100 text-center w-1/2 border-gray-100 border-b-2 pb-3' : 'text-gray-300 text-sm text-center w-1/2 pb-4'}>
+                <Tab className={({ selected }) => selected ? 'text-sm font-semibold text-gray-100 text-center w-1/2 border-gray-100 border-b-2 pb-3' : 'text-gray-300 text-sm text-center w-1/2 pb-4  font-semibold'}>
                   Trade History
                 </Tab>
               </Tab.List>
@@ -48,17 +49,22 @@ const Offer: NextPage = () => {
                   <Overview content='digital ninjas are a collection of 1000 unique collectibles on the NEAR blockchain that serve to honor and preserve art.' />
                 </Tab.Panel>
                 <Tab.Panel>
-                  <p className='flex justify-center items-center flex-center mt-5'> 
-                    <span className='bg-gray-700 py-1 px-2 inline-block rounded-2xl font-12px text-gray-300 font-medium'>12 activity found</span>
+                  <p className='flex items-start mt-5'> 
+                    <span className='font-sm text-gray-300 font-medium'>2 active offer</span>
                   </p>
-                  <Message src='/message1.svg' name='johndoe.near' message='signed the contract successfully' time='2 days ago' />
-                  <Message src='/message2.svg' name='CryptoKing.near' message='requested to sign the contract' time='2 days ago' />
-                  <Message src='/message2.svg' name='maxwell.near' message='requested to sign the contract' time='2 days ago' />
+                  {/* <Notification src='/message1.svg'>
+
+                  </Notification>
+                  <Notification src='/message2.svg' ></Notification>
+                  <Notification src='/message2.svg' /></Notification> */}
                 </Tab.Panel>
                 <Tab.Panel as='div' className='mt-4'>
-                  <Message src='/message1.svg' name='johndoe.near' message='signed the contract successfully' time='2 months ago' />
-                  <Message src='/message2.svg' name='CryptoKing.near' message='requested to sign the contract' time='2 days ago' />
-                  <Message src='/message2.svg' name='maxwell.near' message='requested to sign the contract' time='2 days ago' />
+                  <Notification src='/message1.svg'>
+                    <MessageTrade type='trade' buyer='johndoe.near' seller='ninjaking.near' number='#72873' time='2 months ago' />
+                  </Notification>
+                  <Notification src='/message1.svg'>
+                    <MessageTrade type='trade' buyer='ninja.near' seller='johndoe.near' number='#72873' time='3 months ago' />
+                  </Notification>
                 </Tab.Panel>
               </Tab.Panels>
             </Tab.Group>
