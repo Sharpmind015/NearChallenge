@@ -7,16 +7,16 @@ const useModalWrapper : (children: JSX.Element, title: JSX.Element, description:
   isOpen: boolean;
   setIsOpen: Dispatch<SetStateAction<boolean>>;
 } = (children , title , description ) => {
-  let [isOpen, setIsOpen] = useState(true)
+  let [isOpen, setIsOpen] = useState(false)
 
   
     const ModalWrapper : FC = () => (
-      <Dialog className="fixed z-10 inset-0 overflow-y-auto" open={isOpen} onClose={() => setIsOpen(false)}>
+      <Dialog className="fixed z-50 inset-0 overflow-y-auto" open={isOpen} onClose={() => setIsOpen(false)}>
         <div className="flex items-start justify-center min-h-screen">
-          <Dialog.Overlay  className="fixed inset-0 bg-black opacity-30" />
-          <div className="relative bg-white rounded shadow-md w-5/6 mx-auto mt-16 pt-5 pb-7">
+          <Dialog.Overlay  className="fixed inset-0 bg-gray-100 opacity-40" />
+          <div className="relative bg-white rounded-md shadow-md w-5/6 mx-auto mt-16 px-6 pt-5 pb-7">
             <Dialog.Title>{title}</Dialog.Title>
-            <Dialog.Description>
+            <Dialog.Description className='visuallyHidden'>
               {description}
             </Dialog.Description>
             {children}
