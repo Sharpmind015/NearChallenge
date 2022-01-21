@@ -9,6 +9,7 @@ import Topbar from '../layouts/Topbar'
 import RecentExperience from '../components/RecentExperience'
 import Category from '../components/Category'
 import SeeAllContainer from '../layouts/SeeAllContainer'
+import Loader from '../components/Loader'
 import { Data } from './api/recentexperiences'
 
 const Experiences: NextPage = () => {
@@ -23,12 +24,7 @@ const Experiences: NextPage = () => {
   }
 
   if (isLoading) return (
-    <div className='bg-accent-100 flex items-center justify-center h-screen w-full'>
-      <span className="flex h-10 w-10">
-        <span className="animate-ping absolute inline-flex h-10 w-10 rounded-full bg-white opacity-75"></span>
-        <span className="relative inline-flex rounded-full h-10 w-10 bg-white"></span>
-      </span>
-    </div>
+    <Loader />
   )
 
   if (error) return <>An error has occurred</>
@@ -58,8 +54,9 @@ const Experiences: NextPage = () => {
             </button>
           </div>
           <h3 className='heading heading--2 mt-40'>Recent Experiences</h3>
-          <RecentExperience src='/DeFi.png' title='DeFi Swap' description='Swap your digital assets' users='+200 users' />
-          <RecentExperience src='/Docu.png' title='Docu Sign' description='sign smart contracts seamlessly' users='+1k users' />
+          {data && data.data.map(({src, title, description, users, id}) => (
+              <RecentExperience key={id} src={src} title={title} description={description} users={users} />
+          ))}
           <SeeAllContainer title='Popular Categories' />
           <div className='flex justify-between flex-wrap -mx-3'>
             <div className='px-3 w-1/2'>
