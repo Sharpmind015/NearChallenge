@@ -62,7 +62,11 @@ const Experience: NextPage = () => {
                     </Link>
                   </div>
                 </Tab.Panel>
-                <Tab.Panel>Content 2</Tab.Panel>
+                <Tab.Panel>
+                  <p className='flex justify-center items-center flex-center mt-5'> 
+                    <span className='bg-gray-700 py-1 px-2 inline-block rounded-2xl font-12px text-gray-300 font-medium'>12 activity found</span>
+                  </p>
+                </Tab.Panel>
               </Tab.Panels>
             </Tab.Group>
           </main>
