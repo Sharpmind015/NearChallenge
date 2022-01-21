@@ -27,30 +27,36 @@ const Offer: NextPage = () => {
           <main className="px-6">
             <h2 className='heading heading--3 mt-4 text-black'>Digital Ninja</h2>
             <p className='text-sm font-medium leading-5 not-italic text-accent-100 mt-2'>#72873</p>
+            <div className='flex items-center mt-3'>
+              <Image src='/message1.svg' width='26' height='26' alt='' />
+              <p className='heading heading--1 text-gray-100 ml-2'>Johndoe.near</p>
+            </div>
             <Tab.Group as='div' className='w-full mt-6'>
               <Tab.List className='flex justify-between w-screen -mx-6 border-b-1 border-gray-500'>
-                <Tab className={({ selected }) => selected ? 'text-base font-semibold text-gray-100 text-center w-1/2 border-gray-100 border-b-2 pb-3' : 'text-gray-300 text-base text-center w-1/2 pb-4'}>
-                  Details
+                <Tab className={({ selected }) => selected ? 'text-sm font-semibold text-gray-100 text-center w-1/2 border-gray-100 border-b-2 pb-3' : 'text-gray-300 text-sm text-center w-1/2 pb-4'}>
+                  Info
                 </Tab>
-                <Tab className={({ selected }) => selected ? 'text-base font-semibold text-gray-100 text-center w-1/2 border-gray-100 border-b-2 pb-3' : 'text-gray-300 text-base text-center w-1/2 pb-4'}>
-                  Activities
+                <Tab className={({ selected }) => selected ? 'text-sm font-semibold text-gray-100 text-center w-1/2 border-gray-100 border-b-2 pb-3' : 'text-gray-300 text-sm text-center w-1/2 pb-4'}>
+                  Pending Offers
+                </Tab>
+                <Tab className={({ selected }) => selected ? 'text-sm font-semibold text-gray-100 text-center w-1/2 border-gray-100 border-b-2 pb-3' : 'text-gray-300 text-sm text-center w-1/2 pb-4'}>
+                  Trade History
                 </Tab>
               </Tab.List>
               <Tab.Panels>
                 <Tab.Panel>
-                  <Overview content='it is easy to electronically sign, manage and distribute all your contracts and documents safely, securely, anywhere, anytime- paperlessly.' />
-                  <div className='flex mt-6'>
-                    <Image src='/world.svg' width='22' height='22' alt=''/>
-                    <Link href='https://docusignn.io'>
-                      <a target='_blank' className='text-sm font-medium leading-5.5 not-italic text-blue-100 ml-4'>https://docusignn.io</a>
-                    </Link>
-                  </div>
+                  <Overview content='digital ninjas are a collection of 1000 unique collectibles on the NEAR blockchain that serve to honor and preserve art.' />
                 </Tab.Panel>
                 <Tab.Panel>
                   <p className='flex justify-center items-center flex-center mt-5'> 
                     <span className='bg-gray-700 py-1 px-2 inline-block rounded-2xl font-12px text-gray-300 font-medium'>12 activity found</span>
                   </p>
                   <Message src='/message1.svg' name='johndoe.near' message='signed the contract successfully' time='2 days ago' />
+                  <Message src='/message2.svg' name='CryptoKing.near' message='requested to sign the contract' time='2 days ago' />
+                  <Message src='/message2.svg' name='maxwell.near' message='requested to sign the contract' time='2 days ago' />
+                </Tab.Panel>
+                <Tab.Panel as='div' className='mt-4'>
+                  <Message src='/message1.svg' name='johndoe.near' message='signed the contract successfully' time='2 months ago' />
                   <Message src='/message2.svg' name='CryptoKing.near' message='requested to sign the contract' time='2 days ago' />
                   <Message src='/message2.svg' name='maxwell.near' message='requested to sign the contract' time='2 days ago' />
                 </Tab.Panel>
