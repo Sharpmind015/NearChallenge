@@ -11,7 +11,7 @@ interface Props {
 
 const RecentExperience : FC<Props> = ({src, title, description, users}) => {
   return (
-    <Link href='' >
+    <Link href='experience/1' >
       <a className='flex flex-wrap justify-between mt-4'>
         <div className='flex flex-wrap'>
           <Image src={src} width='69' height='69' alt='' />
