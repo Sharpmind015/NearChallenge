@@ -9,6 +9,7 @@ import Topbar from '../../layouts/Topbar'
 import Overview from '../../components/Overview'
 import Notification from '../../components/Notification'
 import MessageTrade from '../../components/MessageTrade'
+import MessageOffer from '../../components/MessageOffers'
 import style from '../../styles/Offer.module.css'
 
 const Offer: NextPage = () => {
@@ -52,11 +53,12 @@ const Offer: NextPage = () => {
                   <p className='flex items-start mt-5'> 
                     <span className='font-sm text-gray-300 font-medium'>2 active offer</span>
                   </p>
-                  {/* <Notification src='/message1.svg'>
-
+                  <Notification src='/message2.svg'>
+                    <MessageOffer name='CryptoKing.near' offer='0.345 NEAR' time='5 days ago'/>
                   </Notification>
-                  <Notification src='/message2.svg' ></Notification>
-                  <Notification src='/message2.svg' /></Notification> */}
+                  <Notification src='/message1.svg'>
+                    <MessageOffer name='CryptoKing.near' offer='0.345 NEAR' time='5 days ago'/>
+                  </Notification>
                 </Tab.Panel>
                 <Tab.Panel as='div' className='mt-4'>
                   <Notification src='/message1.svg'>
