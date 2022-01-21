@@ -1,3 +1,5 @@
+import {useEffect} from 'react'
+import { useRouter } from 'next/router'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
@@ -5,6 +7,10 @@ import style from '../styles/Home.module.css'
 import Container from '../layouts/Container'
 
 const Home: NextPage = () => {
+  const router = useRouter()
+  useEffect(() => {
+    setTimeout(() => router.push('/experiences'), 2000)
+  }, [])
   return (
     <div className="">
       <Head>
