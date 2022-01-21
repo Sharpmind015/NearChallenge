@@ -7,6 +7,7 @@ import { Tab } from '@headlessui/react'
 import Container from '../../layouts/Container'
 import Topbar from '../../layouts/Topbar'
 import Overview from '../../components/Overview'
+import Message from '../../components/Message'
 
 const Experience: NextPage = () => {
   return (
@@ -66,6 +67,9 @@ const Experience: NextPage = () => {
                   <p className='flex justify-center items-center flex-center mt-5'> 
                     <span className='bg-gray-700 py-1 px-2 inline-block rounded-2xl font-12px text-gray-300 font-medium'>12 activity found</span>
                   </p>
+                  <Message src='/message1.svg' name='johndoe.near' message='signed the contract successfully' time='2 days ago' />
+                  <Message src='/message2.svg' name='CryptoKing.near' message='requested to sign the contract' time='2 days ago' />
+                  <Message src='/message2.svg' name='maxwell.near' message='requested to sign the contract' time='2 days ago' />
                 </Tab.Panel>
               </Tab.Panels>
             </Tab.Group>
