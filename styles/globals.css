@@ -26,6 +26,9 @@
   .btn-primary {
     @apply w-full text-center bg-accent-200 text-white;
   }
+  .btn-secondary {
+    @apply w-full text-center bg-gray-100 text-white;
+  }
 }
 
 
